@@ -32,14 +32,16 @@
         <!-- changes below per recommendation of Doug Brown
          see: https://www.youtube.com/watch?v=92dtrNU1GQc -->
         <div class='filter-selectors'>
+        <label id="neighborhoods-label" class="filter-label">By Borough</label>
         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-          <option value="all">All Neighborhoods</option>
+          <option value="all">All Boroughs</option>
         </select>
-        <label id="neighborhoods-label" class="filter-label">by neighborhoods</label>
+        <br>
+        <label id="cuisines-label" class="filter-label">By Cuisine</label>
         <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
-        <label id="cuisines-label" class="filter-label">by cuisines</label>
+
         </div>
       </div>
       <ul id="restaurants-list"></ul>
