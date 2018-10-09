@@ -25,3 +25,4 @@ For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 * [Matthew Cranford's Walkthrough Part 2](https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-2-responsiveness/)
 * [Matthew Cranford's Walkthrough Part 4](https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/)
 * [Doug Brown's Project 1 MWS Webinar](https://youtu.be/92dtrNU1GQc)
+* [UIUX Lab Medium Post on Breakpoints](https://medium.com/@uiuxlab/the-most-used-responsive-breakpoints-in-2017-of-mine-9588e9bd3a8a)
