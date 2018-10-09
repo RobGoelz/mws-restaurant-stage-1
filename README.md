@@ -23,7 +23,5 @@ For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Attributions
 * [Matthew Cranford's Walkthrough Part 2](https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-2-responsiveness/)
-
-* [Udacity Forum Post: Make Restaurant Attribute Strings Wrap or Line-Break using JavaScript](https://discussions.udacity.com/t/p5-how-to-make-restaurant-attribute-strings-wrap-or-line-break-using-javascript/861307)
-
-<!-- * [Benjamin Cunningham's Medium Post on Testing with Jasmine](https://medium.com/letsboot/testing-javascript-with-jasmine-basics-48efe03cf973) -->
+* [Matthew Cranford's Walkthrough Part 4](https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/)
+* [Doug Brown's Project 1 MWS Webinar](https://youtu.be/92dtrNU1GQc)
