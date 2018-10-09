@@ -17,7 +17,7 @@ body {
 	position:relative;
   /* add breakpoints @ max-width & margin, per recommendation of Doug Brown/UIUXLab
   see: https://www.youtube.com/watch?v=92dtrNU1GQc && https://goo.gl/Rzj8Mm*/
-  max-width: 1020px;
+  max-width: 1200px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -73,6 +73,8 @@ section {
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 #footer {
@@ -86,20 +88,24 @@ section {
 }
 
 /* ====================== Navigation ====================== */
+/* several changes here, per recommendation of Doug Brown */
 nav {
   width: 100%;
-  height: 80px;
+  /* removed static height, fixes overlap on smaller screens*/
   background-color: #252831;
   text-align:center;
 }
 
 nav h1 {
   margin: auto;
+  /* added padding to better center the h1 across all viewport sizes*/
+  padding: 25px 25px;
 }
 
 nav h1 a {
   color: #fff;
-  font-size: 14pt;
+  /* bumped font-size to 20px for better visibility */
+  font-size: 20px;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
@@ -111,7 +117,8 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    /* set max-width to 100% for better alignment on all viewports */
+    max-width: 100%;
 }
 
 /* Display list items side by side */
@@ -149,9 +156,10 @@ nav h1 a {
 .filter-options {
   width: 100%;
   height: 100%;
-  background-color: #3397DB;
+  /* modify background-color to match header and better align color scheme */
+  background-color: #252831;
   align-items: center;
-  padding: 10px 0 0 10px;
+  padding: 15px 0;
 }
 
 .filter-options h2 {
@@ -175,6 +183,8 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Listing ====================== */
+  /* originally liked Matthew Cranford's ideas about this section, but implemented
+  more of Doug Brown's suggestions for better responsiveness in design*/
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
@@ -182,8 +192,11 @@ nav h1 a {
   padding: 30px 15px 60px;
   text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* row rather than column */
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* centers last restaurant on larger viewports */
+  justify-content: center;
 }
 
 #restaurants-list li {
@@ -194,7 +207,31 @@ nav h1 a {
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
-  width: 270px;
+  min-width: 270px;
+  max-width: 300px;
+}
+
+/*  responsive breakpoints for different viewports for restaurant list items */
+
+/* breakpoint for smartphone - GS5 equiv */
+@media screen and (min-width: 360px) {
+  #restaurants-list li {
+    max-width: 100%;
+  }
+}
+
+/* breakpoint for tablet - iPad equiv */
+@media screen and (min-width: 750px) {
+  #restaurants-list li {
+    max-width: 33%;
+  }
+}
+
+/* breakpoint for laptop or desktop*/
+@media screen and (min-width: 1000px) {
+  #restaurants-list li {
+    max-width: 270px;
+  }
 }
 
 #restaurants-list .restaurant-img {
@@ -202,7 +239,7 @@ nav h1 a {
   display: block;
   margin: 0;
   max-width: 100%;
-  min-height: 248px;
+  /* removed min-height - was causing weird image streching*/
   min-width: 100%;
 }
 
@@ -235,7 +272,25 @@ nav h1 a {
   text-transform: uppercase;
 }
 
+/* adding following two section per recommendation  of Doug Brown for
+responsiveness and accessibility, see: https://youtu.be/92dtrNU1GQc?t=1412*/
+
+.filter-selectors {
+  display: flex;
+  flew-direction: row;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  display: none;
+}
+
 /* ====================== Restaurant Details ====================== */
+.inside {
+  display: flex;
+  flex-direction: column;
+}
+
 .inside header {
   position: fixed;
   top: 0;
@@ -249,7 +304,7 @@ nav h1 a {
   position: fixed;
   right: 0;
   top: 80px;
-  width: 50%;
+  width: 100%;
 }
 
 .inside #map {
@@ -261,7 +316,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 100%;
 }
 
 #restaurant-name {
