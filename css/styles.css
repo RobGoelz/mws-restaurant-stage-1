@@ -13,11 +13,10 @@ p{
 
 body {
 	background-color: #fdfdfd;
-	margin: 0;
 	position:relative;
   /* add breakpoints @ max-width & margin, per recommendation of Doug Brown/UIUXLab
   see: https://www.youtube.com/watch?v=92dtrNU1GQc && https://goo.gl/Rzj8Mm*/
-  max-width: 1200px;
+  max-width: 100%;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -407,7 +406,7 @@ h3 {
 }
 
 #restaurant-hours {
-  width: 100%
+  width: 100%;
   max-width: 350px;
 }
 
